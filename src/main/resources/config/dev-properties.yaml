@@ -1,0 +1,4 @@
+variables:
+  entorno:
+    ambiente: develop
+    valor_encriptado: ""

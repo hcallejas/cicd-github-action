@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="11ec9101-a1b2-45d8-982f-009a9a834785" >
+		<http:listener-connection host="0.0.0.0" port="8081"/>
+	</http:listener-config>
+	<configuration-properties doc:name="Configuration properties" doc:id="eea52661-b8eb-4e92-b0f5-f147623aff1a" file="config/${env}-properties.yaml" />
+	<global-property doc:name="Global Property" doc:id="6eef286c-2dd4-4071-8dad-f822995964c7" name="env" value="dev" />
+	<flow name="cicd-github-actionFlow" doc:id="2d12f7f7-e644-42b9-80e9-cb64d53bb1d1" >
+		<http:listener doc:name="Listener" doc:id="dd5e62e4-8841-49c9-8be7-91e9b75d98d8" config-ref="HTTP_Listener_config" path="/test-cicd" outputMimeType="application/json" allowedMethods="GET"/>
+		<ee:transform doc:name="Leer variabels entorno" doc:id="7dd3d002-ec04-4995-8ee8-9ffdcdae6f43" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+    variableAmbiente: {
+        valores: {
+            ambiente: p('variables.entorno.ambiente'),
+            valor_encriptado: p('secure::variables.entorno.valor-encriptado')
+        }
+    }
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+	</flow>
+</mule>

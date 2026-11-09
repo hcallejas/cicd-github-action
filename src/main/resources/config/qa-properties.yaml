@@ -1,0 +1,5 @@
+variables:
+  entorno:
+    ambiente: qa
+    valor_encriptado: ""
+    
