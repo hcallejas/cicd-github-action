@@ -36,7 +36,7 @@ jobs:
           <settings>
             <servers>
               <server>
-                <id>anypoint-exchange</id>
+                <id>anypoint-exchange-v3</id>
                 <username>~~~Client~~~</username>
                 <password>${CLIENT_ID}~?~${CLIENT_SECRET}</password>
               </server>
@@ -53,16 +53,16 @@ jobs:
       # 5. Desplegar en CloudHub 2.0
       - name: Deploy to CloudHub 2.0
         env:
-          ANYPOINT_CLIENT_ID: ${{ secrets.CONNECTED_APP_CLIENT_ID }}
-          ANYPOINT_CLIENT_SECRET: ${{ secrets.CONNECTED_APP_CLIENT_SECRET }}
+          CONNECTED_APP_CLIENT_ID: ${{ secrets.CONNECTED_APP_CLIENT_ID }}
+          CONNECTED_APP_CLIENT_SECRET: ${{ secrets.CONNECTED_APP_CLIENT_SECRET }}
           ANYPOINT_BUSINESS_GROUP_ID: ${{ secrets.ANYPOINT_BUSINESS_GROUP_ID }}
           ANYPOINT_ENVIRONMENT: ${{ vars.ANYPOINT_ENVIRONMENT }}
           CLOUDHUB_TARGET: ${{ vars.CLOUDHUB_TARGET }}
           DECRYPTION_KEY: ${{ secrets.DECRYPTION_KEY }}
         run: |
           mvn -B mule:deploy \
-            -Danypoint.connectedApp.clientId="$ANYPOINT_CLIENT_ID" \
-            -Danypoint.connectedApp.clientSecret="$ANYPOINT_CLIENT_SECRET" \
+            -Danypoint.connectedApp.clientId="$CONNECTED_APP_CLIENT_ID" \
+            -Danypoint.connectedApp.clientSecret="$CONNECTED_APP_CLIENT_SECRET" \
             -Danypoint.businessGroupId="$ANYPOINT_BUSINESS_GROUP_ID" \
             -Danypoint.environment="$ANYPOINT_ENVIRONMENT" \
             -Dcloudhub.target="$CLOUDHUB_TARGET" \
