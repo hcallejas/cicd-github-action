@@ -38,7 +38,7 @@
 			            <target>${cloudhub.target}</target>
 			            <applicationName>${cloudhub.application.name}</applicationName>
 			            <muleVersion>${app.runtime}</muleVersion>
-			            <releaseChannel>LTS</releaseChannel>
+			            <releaseChannel>EDGE</releaseChannel>
 			            <javaVersion>17</javaVersion>
 			            <replicas>1</replicas>
 			            <vCores>0.1</vCores>
