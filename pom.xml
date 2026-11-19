@@ -4,7 +4,7 @@
 
 	<groupId>b777f31b-bfde-4965-ba9b-561fc827a578</groupId>
 	<artifactId>cicd-github-action</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<packaging>mule-application</packaging>
 
 	<name>cicd-github-action</name>
@@ -88,7 +88,7 @@
 			<layout>default</layout>
 			<url>https://repository.mulesoft.org/nexus/repository/releases/</url>
 			<snapshots>
-				<enabled>false</enabled>
+				<enabled>true</enabled>
 			</snapshots>
 			<releases>
 	            <enabled>true</enabled>
