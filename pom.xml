@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<!--  groupId>b777f31b-bfde-4965-ba9b-561fc827a578</groupId-->
-	<groupId>${anypoint.businessGroupId}</groupId>
+	<groupId>__ANYPOINT_BUSINESS_GROUP_ID__</groupId>
 	<artifactId>cicd-github-action</artifactId>
 	<version>1.0.1-SNAPSHOT</version>
 	<packaging>mule-application</packaging>

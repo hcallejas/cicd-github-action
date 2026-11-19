@@ -62,5 +62,5 @@ jobs:
           NUM_REPLICAS: 1
           NUM_VCORES: 0.1
         run: |
-          mvn -B mule:deploy \
-          -Danypoint.businessGroupId="$ANYPOINT_BUSINESS_GROUP_ID"
+          sed -i "s|__ANYPOINT_BUSINESS_GROUP_ID__|${ANYPOINT_BUSINESS_GROUP_ID}|g" pom.xml
+          mvn -B mule:deploy
