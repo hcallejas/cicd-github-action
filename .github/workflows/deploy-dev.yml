@@ -59,5 +59,8 @@ jobs:
           CLOUDHUB_TARGET: ${{ vars.CLOUDHUB_TARGET }}
           DECRYPTION_KEY: ${{ secrets.DECRYPTION_KEY }}
           ANYPOINT_ENVIRONMENT: DEV
+          NUM_REPLICAS: 1
+          NUM_VCORES: 0.1
         run: |
-          mvn -B mule:deploy 
+          mvn -B mule:deploy \
+          -Danypoint.businessGroupId="$ANYPOINT_BUSINESS_GROUP_ID"
