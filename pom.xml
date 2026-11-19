@@ -36,7 +36,7 @@
 			            <provider>MC</provider>
 			            <environment>${anypoint.environment}</environment>
 			            <businessGroupId>b777f31b-bfde-4965-ba9b-561fc827a578</businessGroupId>
-			            <target>4.12.5</target>
+			            <target>4.11.4</target>
 			            <applicationName>${cloudhub.application.name}</applicationName>
 			            <muleVersion>${cloud.runtime}</muleVersion>
 			            <releaseChannel>EDGE</releaseChannel>
