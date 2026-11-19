@@ -37,7 +37,7 @@
 			            <provider>MC</provider>
 			            <environment>${anypoint.environment}</environment>
 			            <businessGroupId>b777f31b-bfde-4965-ba9b-561fc827a578</businessGroupId>
-			            <target>${region}</target>
+			            <target>Cloudhub-US-East-1</target>
 			            <applicationName>${cloudhub.application.name}</applicationName>
 			            <muleVersion>${cloud.runtime}</muleVersion>
 			            <releaseChannel>EDGE</releaseChannel>
