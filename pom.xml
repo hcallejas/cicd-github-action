@@ -39,7 +39,7 @@
 			            <businessGroupId>b777f31b-bfde-4965-ba9b-561fc827a578</businessGroupId>
 			            <target>Cloudhub-US-East-1</target>
 			            <applicationName>${cloudhub.application.name}</applicationName>
-			            <muleVersion>4.12.5:2e</muleVersion>
+			            <muleVersion>4.12.5</muleVersion>
 			            <releaseChannel>EDGE</releaseChannel>
 			            <javaVersion>17</javaVersion>
 			            <replicas>1</replicas>
