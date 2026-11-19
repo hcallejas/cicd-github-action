@@ -16,8 +16,8 @@
 		<cloudhub.target>${env.CLOUDHUB_TARGET}</cloudhub.target>
 		<anypoint.connectedApp.clientId>${env.CONNECTED_APP_CLIENT_ID}</anypoint.connectedApp.clientId>
 		<anypoint.connectedApp.clientSecret>${env.CONNECTED_APP_CLIENT_SECRET}</anypoint.connectedApp.clientSecret>
-		<anypoint.environment>${env.ANYPOINT_ENVIROMENT}</anypoint.environment>
-		<mule.maven.plugin.version>${env.MULE_MAVEN_PLUGIN_VERSION}</mule.maven.plugin.version>
+		<anypoint.environment>${env.ANYPOINT_ENVIRONMENT}</anypoint.environment>
+		<mule.maven.plugin.version>4.9.1</mule.maven.plugin.version>
 		<replicas>1</replicas>
 		<vcores>0.1</vcores>
 		<cloudhub.application.name>${project.artifactId}</cloudhub.application.name>
