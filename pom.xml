@@ -39,7 +39,7 @@
 			            <businessGroupId>b777f31b-bfde-4965-ba9b-561fc827a578</businessGroupId>
 			            <target>PS-GTD-SANDBOX</target>
 			            <applicationName>${cloudhub.application.name}</applicationName>
-			            <releaseChannel>EDGE</releaseChannel>
+			            <!--  >releaseChannel>EDGE</releaseChannel-->
 			            <!-- >javaVersion>17</javaVersion-->
 			            <replicas>1</replicas>
 			            <vCores>0.1</vCores>
