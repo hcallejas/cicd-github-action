@@ -90,6 +90,9 @@
 			<snapshots>
 				<enabled>false</enabled>
 			</snapshots>
+			<releases>
+	            <enabled>true</enabled>
+	        </releases>
 		</pluginRepository>
 	</pluginRepositories>
 	
