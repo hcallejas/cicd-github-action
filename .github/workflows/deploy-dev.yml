@@ -62,32 +62,5 @@ jobs:
           NUM_REPLICAS: 1
           NUM_VCORES: 0.1
         run: |
-          python3 - <<'PY'
-          import os
-          from pathlib import Path
-
-          pom = Path("pom.xml")
-          content = pom.read_text(encoding="utf-8")
-
-          group_id = os.environ["ANYPOINT_BUSINESS_GROUP_ID"].strip()
-
-          if not group_id:
-              raise SystemExit("ERROR: ANYPOINT_BUSINESS_GROUP_ID está vacío")
-
-          placeholder = "__ANYPOINT_BUSINESS_GROUP_ID__"
-
-          if placeholder not in content:
-              raise SystemExit("ERROR: No se encontró el marcador en pom.xml")
-
-          content = content.replace(placeholder, group_id)
-
-          pom.write_text(content, encoding="utf-8")
-
-          if placeholder in pom.read_text(encoding="utf-8"):
-              raise SystemExit("ERROR: El reemplazo no se realizó")
-
-          print("GroupId reemplazado correctamente")
-          PY
-
           mvn -B mule:deploy
           
