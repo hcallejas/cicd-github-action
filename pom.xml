@@ -14,7 +14,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<app.runtime>4.11.4</app.runtime>
 		<cloud.runtime>4.12.5:2e</cloud.runtime>
-		<region>Cloudhub-US-East-1</region>
+		<region>PS-GTD-SANDBOX</region>
 		<mule.maven.plugin.version>4.9.1</mule.maven.plugin.version>
 		<cloudhub.application.name>${project.artifactId}</cloudhub.application.name>
 	</properties>
@@ -39,8 +39,7 @@
 			            <businessGroupId>b777f31b-bfde-4965-ba9b-561fc827a578</businessGroupId>
 			            <target>PS-GTD-SANDBOX</target>
 			            <applicationName>${cloudhub.application.name}</applicationName>
-			            <!--  >muleVersion>4.12.6:7e-java17</muleVersion-->
-			            <!--  >releaseChannel>EDGE</releaseChannel-->
+			            <releaseChannel>EDGE</releaseChannel>
 			            <!-- >javaVersion>17</javaVersion-->
 			            <replicas>1</replicas>
 			            <vCores>0.1</vCores>
