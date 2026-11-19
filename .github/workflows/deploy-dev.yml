@@ -56,14 +56,14 @@ jobs:
           CONNECTED_APP_CLIENT_ID: ${{ secrets.CONNECTED_APP_CLIENT_ID }}
           CONNECTED_APP_CLIENT_SECRET: ${{ secrets.CONNECTED_APP_CLIENT_SECRET }}
           ANYPOINT_BUSINESS_GROUP_ID: ${{ secrets.ANYPOINT_BUSINESS_GROUP_ID }}
-          ANYPOINT_ENVIRONMENT: ${{ vars.ANYPOINT_ENVIRONMENT }}
           CLOUDHUB_TARGET: ${{ vars.CLOUDHUB_TARGET }}
           DECRYPTION_KEY: ${{ secrets.DECRYPTION_KEY }}
         run: |
           mvn -B mule:deploy \
-            -Danypoint.connectedApp.clientId="$CONNECTED_APP_CLIENT_ID" \
-            -Danypoint.connectedApp.clientSecret="$CONNECTED_APP_CLIENT_SECRET" \
+            -DCONNECTED_APP_CLIENT_ID="$CONNECTED_APP_CLIENT_ID" \
+            -DCONNECTED_APP_CLIENT_SECRET="$CONNECTED_APP_CLIENT_SECRET" \
             -Danypoint.businessGroupId="$ANYPOINT_BUSINESS_GROUP_ID" \
-            -Danypoint.environment="$ANYPOINT_ENVIRONMENT" \
+            -DANYPOINT_ENVIROMENT="DEV" \
             -DCLOUDHUB_TARGET="$CLOUDHUB_TARGET" \
-            -Ddecryption.key="$DECRYPTION_KEY"
+            -Ddecryption.key="$DECRYPTION_KEY" \
+            -DMULE_MAVEN_PLUGIN_VERSION="4.9.1" 

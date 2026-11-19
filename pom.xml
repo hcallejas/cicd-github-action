@@ -13,9 +13,13 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<app.runtime>4.11.4</app.runtime>
-		<cloud.runtime>4.12.5:2e</cloud.runtime>
 		<cloudhub.target>${env.CLOUDHUB_TARGET}</cloudhub.target>
-		<mule.maven.plugin.version>4.9.1</mule.maven.plugin.version>
+		<anypoint.connectedApp.clientId>${env.CONNECTED_APP_CLIENT_ID}</anypoint.connectedApp.clientId>
+		<anypoint.connectedApp.clientSecret>${env.CONNECTED_APP_CLIENT_SECRET}</anypoint.connectedApp.clientSecret>
+		<anypoint.environment>${env.ANYPOINT_ENVIROMENT}</anypoint.environment>
+		<mule.maven.plugin.version>$[env.MULE_MAVEN_PLUGIN_VERSION]</mule.maven.plugin.version>
+		<replicas>1</replicas>
+		<vcores>0.1</vcores>
 		<cloudhub.application.name>${project.artifactId}</cloudhub.application.name>
 	</properties>
 
@@ -39,8 +43,8 @@
 			            <businessGroupId>b777f31b-bfde-4965-ba9b-561fc827a578</businessGroupId>
 			            <target>${cloudhub.target}</target>
 			            <applicationName>${cloudhub.application.name}</applicationName>
-			            <replicas>1</replicas>
-			            <vCores>0.1</vCores>
+			            <replicas>${replicas}</replicas>
+			            <vCores>${vcores}</vCores>
 			            <connectedAppClientId>${anypoint.connectedApp.clientId}</connectedAppClientId>
 			            <connectedAppClientSecret>${anypoint.connectedApp.clientSecret}</connectedAppClientSecret>
 			            <connectedAppGrantType>client_credentials</connectedAppGrantType>
