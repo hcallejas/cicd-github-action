@@ -39,9 +39,9 @@
 			            <businessGroupId>b777f31b-bfde-4965-ba9b-561fc827a578</businessGroupId>
 			            <target>PS-GTD-SANDBOX</target>
 			            <applicationName>${cloudhub.application.name}</applicationName>
-			            <muleVersion>4.12.5:2e</muleVersion>
-			            <releaseChannel>EDGE</releaseChannel>
-			            <javaVersion>17</javaVersion>
+			            <muleVersion>4.12.5:2e-java17</muleVersion>
+			            <!--  >releaseChannel>EDGE</releaseChannel-->
+			            <!-- >javaVersion>17</javaVersion-->
 			            <replicas>1</replicas>
 			            <vCores>0.1</vCores>
 			            <connectedAppClientId>${anypoint.connectedApp.clientId}</connectedAppClientId>
