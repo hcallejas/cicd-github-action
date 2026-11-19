@@ -60,10 +60,4 @@ jobs:
           DECRYPTION_KEY: ${{ secrets.DECRYPTION_KEY }}
           ANYPOINT_ENVIRONMENT: DEV
         run: |
-          mvn -B mule:deploy \
-            -DCONNECTED_APP_CLIENT_ID="$CONNECTED_APP_CLIENT_ID" \
-            -DCONNECTED_APP_CLIENT_SECRET="$CONNECTED_APP_CLIENT_SECRET" \
-            -Danypoint.businessGroupId="$ANYPOINT_BUSINESS_GROUP_ID" \
-            -ANYPOINT_ENVIRONMENT="$ANYPOINT_ENVIRONMENT" \
-            -DCLOUDHUB_TARGET="$CLOUDHUB_TARGET" \
-            -Ddecryption.key="$DECRYPTION_KEY" 
+          mvn -B mule:deploy 
