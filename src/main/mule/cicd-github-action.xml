@@ -21,7 +21,8 @@ output application/json
     variableAmbiente: {
         valores: {
             ambiente: p('variables.entorno.ambiente'),
-            valor_encriptado: p('secure::variables.entorno.valor-encriptado')
+            valor_encriptado: p('secure::variables.entorno.valor-encriptado'),
+            test_data: "valor variable despliegue"
         }
     }
 }]]></ee:set-payload>

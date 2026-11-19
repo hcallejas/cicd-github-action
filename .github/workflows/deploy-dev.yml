@@ -65,5 +65,5 @@ jobs:
             -Danypoint.connectedApp.clientSecret="$CONNECTED_APP_CLIENT_SECRET" \
             -Danypoint.businessGroupId="$ANYPOINT_BUSINESS_GROUP_ID" \
             -Danypoint.environment="$ANYPOINT_ENVIRONMENT" \
-            -Dcloudhub.target="$CLOUDHUB_TARGET" \
+            -DCLOUDHUB_TARGET="$CLOUDHUB_TARGET" \
             -Ddecryption.key="$DECRYPTION_KEY"
