@@ -14,6 +14,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<app.runtime>4.11.4</app.runtime>
 		<cloud.runtime>4.12.5:2e</cloud.runtime>
+		<region>Cloudhub-US-East-1</region>
 		<mule.maven.plugin.version>4.9.1</mule.maven.plugin.version>
 		<cloudhub.application.name>${project.artifactId}</cloudhub.application.name>
 	</properties>
@@ -36,7 +37,7 @@
 			            <provider>MC</provider>
 			            <environment>${anypoint.environment}</environment>
 			            <businessGroupId>b777f31b-bfde-4965-ba9b-561fc827a578</businessGroupId>
-			            <target>4.11.4</target>
+			            <target>${region}</target>
 			            <applicationName>${cloudhub.application.name}</applicationName>
 			            <muleVersion>${cloud.runtime}</muleVersion>
 			            <releaseChannel>EDGE</releaseChannel>
