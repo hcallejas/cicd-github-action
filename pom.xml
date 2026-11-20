@@ -51,6 +51,9 @@
 			            <deploymentSettings>
                             <generateDefaultPublicUrl>true</generateDefaultPublicUrl>
                         </deploymentSettings>
+                       <properties>
+						    <env>${env}</env>
+						</properties>
 			        </cloudhub2Deployment>
 			    </configuration>
 			</plugin>

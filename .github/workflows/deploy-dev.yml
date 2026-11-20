@@ -62,5 +62,5 @@ jobs:
           NUM_REPLICAS: 1
           NUM_VCORES: 0.1
         run: |
-          mvn -B mule:deploy
+          mvn -B mule:deploy -DmuleDeploy -Denv=prod
           
